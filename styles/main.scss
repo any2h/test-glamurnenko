@@ -1,0 +1,170 @@
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    background-image: url(/images/bg-main.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header a {
+    font-family: 'Oranienbaum', serif;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none !important;
+    color: inherit !important;
+    transition: all .15s ease-in-out;
+    
+    &:not([data-fancybox]):hover {
+        opacity: .5;
+    }
+}
+
+.fa-brands:hover {
+    color: inherit !important;
+}
+
+/* Navbar */
+.navbar {
+    @media (max-width: 992px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #000;
+    }
+}
+
+/* Hero Section */
+.hero {
+    margin-top: clamp(4rem, 10vw, 7.5rem);
+    margin-bottom: clamp(4rem, 12.5vw, 11.5rem);
+
+    @media (max-width: 992px) {
+        padding-top: 160px;
+    }
+
+    &__text a {
+        text-decoration: underline !important;
+
+        @media (max-width: 45em) {
+            width: 20ch;
+        }
+    }
+}
+
+/* Features section */
+.features {
+
+    &__table {
+        border-collapse: collapse;
+        border: 2px solid orange;
+        font-weight: bold;
+
+        thead {
+            font-size: .75rem;
+            background-color: #ffd100;
+        }
+
+        tbody {
+            vertical-align: top;
+            font-size: .6875rem;
+        }
+
+        th {
+            padding-block: .75rem;
+        }
+
+        td {
+            padding-block: .5rem;
+            background-color: #fff000;
+
+            div {
+                font-size: .625rem;
+            }
+        }
+
+        td, th {
+            border: 2px solid orange;
+        }
+
+        td:not(:first-child),
+        th:not(:first-child) {
+            text-align: center;
+        }
+
+        @media (min-width: 33.75em) {
+            thead {
+                font-size: initial;
+            }
+
+            tbody {
+                font-size: initial;
+            }
+
+            td, th {
+                padding-inline: 1.5rem;
+            }
+        }
+    }
+
+    &__pricing .card-deck .card {
+        transition: box-shadow .15s ease-in-out;
+    
+        &:hover {
+            box-shadow: 0 0 25px 0 rgba(128, 128, 128,.5) !important;
+        }
+    }
+
+    &__showcase {
+        > a {
+            height: 320px;
+            margin-block: 2rem;
+            text-decoration: none;
+            color: inherit;
+            gap: 2rem;
+
+            > div:first-child {
+                height: 100%;
+
+                img {
+                    height: 100%;
+                    transition: all .2s ease-in-out;
+                }
+            }
+
+            &:hover {
+                img {
+                    scale: 1.065;
+                }
+            }
+
+            @media (max-width: 33.75em) {
+                height: 260px;
+                font-size: .875rem;
+            }
+        }
+    }
+}
+
+/* Footer */
+.footer {
+    font-size: .875rem;
+
+    a:first-child {
+        position: relative; 
+        left: 50%; 
+        translate: -50% 0;
+    }
+}

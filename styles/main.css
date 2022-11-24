@@ -1,0 +1,149 @@
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+  background-image: url(/images/bg-main.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header a {
+  font-family: "Oranienbaum", serif;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: all 0.15s ease-in-out;
+}
+a:not([data-fancybox]):hover {
+  opacity: 0.5;
+}
+
+.fa-brands:hover {
+  color: inherit !important;
+}
+
+/* Navbar */
+@media (max-width: 992px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+  }
+}
+
+/* Hero Section */
+.hero {
+  margin-top: clamp(4rem, 10vw, 7.5rem);
+  margin-bottom: clamp(4rem, 12.5vw, 11.5rem);
+}
+@media (max-width: 992px) {
+  .hero {
+    padding-top: 160px;
+  }
+}
+.hero__text a {
+  text-decoration: underline !important;
+}
+@media (max-width: 45em) {
+  .hero__text a {
+    width: 20ch;
+  }
+}
+
+/* Features section */
+.features__table {
+  border-collapse: collapse;
+  border: 2px solid orange;
+  font-weight: bold;
+}
+.features__table thead {
+  font-size: 0.75rem;
+  background-color: #ffd100;
+}
+.features__table tbody {
+  vertical-align: top;
+  font-size: 0.6875rem;
+}
+.features__table th {
+  padding-block: 0.75rem;
+}
+.features__table td {
+  padding-block: 0.5rem;
+  background-color: #fff000;
+}
+.features__table td div {
+  font-size: 0.625rem;
+}
+.features__table td, .features__table th {
+  border: 2px solid orange;
+}
+.features__table td:not(:first-child),
+.features__table th:not(:first-child) {
+  text-align: center;
+}
+@media (min-width: 33.75em) {
+  .features__table thead {
+    font-size: initial;
+  }
+  .features__table tbody {
+    font-size: initial;
+  }
+  .features__table td, .features__table th {
+    padding-inline: 1.5rem;
+  }
+}
+.features__pricing .card-deck .card {
+  transition: box-shadow 0.15s ease-in-out;
+}
+.features__pricing .card-deck .card:hover {
+  box-shadow: 0 0 25px 0 rgba(128, 128, 128, 0.5) !important;
+}
+.features__showcase > a {
+  height: 320px;
+  margin-block: 2rem;
+  text-decoration: none;
+  color: inherit;
+  gap: 2rem;
+}
+.features__showcase > a > div:first-child {
+  height: 100%;
+}
+.features__showcase > a > div:first-child img {
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.features__showcase > a:hover img {
+  scale: 1.065;
+}
+@media (max-width: 33.75em) {
+  .features__showcase > a {
+    height: 260px;
+    font-size: 0.875rem;
+  }
+}
+
+/* Footer */
+.footer {
+  font-size: 0.875rem;
+}
+.footer a:first-child {
+  position: relative;
+  left: 50%;
+  translate: -50% 0;
+}
+
+/*# sourceMappingURL=main.css.map */
